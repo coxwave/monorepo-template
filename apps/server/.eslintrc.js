@@ -1,5 +1,5 @@
 module.exports = {
-  ...require('config/eslint-server'),
+  ...require('@packages/config/eslint-server'),
   overrides: [
     {
       files: ['**/*.ts'],

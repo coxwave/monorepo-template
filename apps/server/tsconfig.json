@@ -1,9 +1,9 @@
 {
-  "extends": "tsconfig/server.json",
+  "extends": "@packages/tsconfig/server.json",
   "compilerOptions": {
     "outDir": "./dist",
     "importsNotUsedAsValues": "error",
-    "typeRoots": ["node_modules/@types", "**/types"]
+    "typeRoots": ["node_modules/@types", "**/types/*"]
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]

@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@apps/web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@packages/ui": "workspace:*",
     "bowser": "2.11.0",
     "immutability-helper": "3.1.1",
     "joi": "17.6.0",
@@ -16,21 +17,21 @@
     "next": "12.1.0",
     "nextjs-progressbar": "0.0.14",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "ui": "*"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@packages/config": "workspace:*",
+    "@packages/tsconfig": "workspace:*",
     "@types/node": "16.11.9",
     "@types/nprogress": "0.2.0",
     "@types/react": "17.0.35",
     "autoprefixer": "10.4.0",
-    "config": "*",
     "eslint": "7.32.0",
+    "eslint-config-next": "12.1.4",
     "next-transpile-modules": "9.0.0",
     "postcss": "8.4.4",
     "postcss-focus-visible": "6.0.1",
     "tailwindcss": "3.0.23",
-    "tsconfig": "*",
     "typescript": "4.5.4"
   }
 }

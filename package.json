@@ -1,6 +1,4 @@
 {
-  "name": "monorepo-template",
-  "version": "0.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -10,16 +8,20 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "eslint": "8.12.0",
     "prettier": "2.5.1",
     "prettier-plugin-tailwindcss": "0.1.8",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "4.6.3"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "npm": "pleanse-use-yarn",
+    "node": ">=14.0.0",
+    "yarn": "^3"
   },
-  "packageManager": "yarn@1.22.17"
+  "engineStrict": true,
+  "packageManager": "yarn@3.2.0"
 }

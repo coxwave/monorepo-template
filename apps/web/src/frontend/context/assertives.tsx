@@ -1,6 +1,6 @@
+import { Notification, type NotificationProps } from '@packages/ui';
 import update from 'immutability-helper';
 import { createContext, ReactNode, Reducer, useContext, useMemo, useReducer, useRef } from 'react';
-import { Notification, type NotificationProps } from 'ui';
 
 type NotificationContent = Pick<NotificationProps, 'variant' | 'title' | 'content' | 'className'>;
 
