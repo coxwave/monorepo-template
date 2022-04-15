@@ -1,8 +1,4 @@
 {
-  "extends": "tsconfig/nextjs.json",
-  "compilerOptions": {
-    "importsNotUsedAsValues": "error"
-  },
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "@packages/tsconfig/nextjs.json",
+  "include": ["."]
 }

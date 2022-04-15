@@ -1,24 +1,28 @@
 # Turborepo starter
 
-This is an official Yarn v1 starter turborepo.
+This is an official Coxwave v1 starter monorepo.
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This monorepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `@apps/docs`: a [Next.js](https://nextjs.org) app
+- `@apps/web`: another [Next.js](https://nextjs.org) app
+- `@apps/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@packages/config`: `eslint` configurations (and `jest` configurations will be placed here too)
+- `@packages/hooks`: contains useful react hooks
+- `@packages/tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `@packages/types`: useful types which are generally used throughout the monorepo
+- `@packages/ui`: a React component library shared by `next.js` applications (which should be compiled by [next-transpile-modules](https://github.com/martpie/next-transpile-modules) before ussed)
+- `@packages/utils`: contains useful utility functions (eg, logger, sleep, ...)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This turborepo has some additional tools already setup for you:
+This monorepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
@@ -26,43 +30,68 @@ This turborepo has some additional tools already setup for you:
 
 ## Setup
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+This repository can be installation to your own repository when you clicked `Use this template` button
+
+### Installation
+
+We use yarn berry with [Plug'n'Play](https://yarnpkg.com/features/pnp) feature.
+
+```sh
+yarn
+```
+
+### Preparation
+
+We use [husky](https://typicode.github.io/husky/#/) for managing pre-commit hook.
+There's nothing you must hvae done except running this simple script:
+
+```sh
+yarn prepare
+```
 
 ### Build
 
 To build all apps and packages, run the following command:
 
+```sh
+yarn build
 ```
-cd my-turborepo
-yarn run build
+
+To build librarys including packages and sdks, run the floowing command:
+
+```sh
+yarn lib:build
+```
+
+or simply
+
+```sh
+yarn lib
 ```
 
 ### Develop
 
 To develop all apps and packages, run the following command:
 
-```
-cd my-turborepo
-yarn run dev
-```
+To develop `@apps/*`, run the following command:
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```sh
+yarn apps:dev
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+or simply
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
+```sh
+yarn apps
 ```
-npx turbo link
+
+### Upgrade Dependencies
+
+To upgrade all packages in this monorepo,
+try this command:
+
+```sh
+yarn upgrade-interactive
 ```
 
 ## Useful Links

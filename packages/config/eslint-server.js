@@ -5,16 +5,6 @@ module.exports = {
     sourceType: 'module',
     allowImportExportEverywhere: true,
   },
-  overrides: [
-    {
-      files: ['**/*.ts'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        sourceType: 'module',
-        warnOnUnsupportedTypeScriptVersion: true,
-      },
-    },
-  ],
   plugins: ['import', 'unused-imports'],
   extends: ['prettier'],
   rules: {

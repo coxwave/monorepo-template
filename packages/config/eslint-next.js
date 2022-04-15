@@ -1,11 +1,6 @@
 module.exports = {
   extends: ['next', 'next/core-web-vitals', 'prettier'],
   plugins: ['unused-imports'],
-  settings: {
-    next: {
-      rootDir: ['apps/docs', 'apps/web', 'packages/ui', 'packages/config', 'packages/tsconfig'],
-    },
-  },
   rules: {
     'react/display-name': 'off',
     '@next/next/no-img-element': 'off',
