@@ -4,11 +4,11 @@
   "extends": "./base.json",
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2020",
+    "target": "es6",
     "allowJs": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "experimentalDecorators": true
-  },
-  "exclude": ["node_modules"]
+    "experimentalDecorators": true,
+    "typeRoots": ["**/node_modules/@types", "**/types"]
+  }
 }

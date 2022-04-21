@@ -1,0 +1,6 @@
+{
+  "name": "@packages/types",
+  "version": "0.0.0",
+  "description": "external type definitions",
+  "private": true
+}

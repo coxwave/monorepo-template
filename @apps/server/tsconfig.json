@@ -1,0 +1,11 @@
+{
+  "extends": "@packages/tsconfig/server.json",
+  "compilerOptions": {
+    "outDir": "./build",
+    "importsNotUsedAsValues": "error",
+    "typeRoots": ["node_modules/@types", "**/types/*"]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "build"]
+  // Add reference path later
+}
